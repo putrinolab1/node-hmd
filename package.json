@@ -5,6 +5,7 @@
   "keywords"        : ["hmd", "oculus", "rift", "libovr", "dk1", "dk2", "native"],
   "author"          : "GeoJosh <joshua.penton@geocent.com>",
   "scripts"         : {
+    "install": "node-pre-gyp install --fallback-to-build",
     "test" : "mocha -R spec test/test-*.js"
   },
   "lib"             : ".",
@@ -15,7 +16,16 @@
   },
   "version"         : "0.2.1",
   "license"         : "MIT",
+  "dependencies"  : {
+    "node-pre-gyp": "0.5.x"
+  },
+  "bundledDependencies":["node-pre-gyp"],
   "devDependencies" : {
     "mocha" : "1.13.0"
+  },
+  "binary": {
+    "module_name": "hmd",
+    "module_path": "./lib/binding/",
+    "host": "https://github.com/putrinolab1/operator-binaries/raw/master"
   }
 }
