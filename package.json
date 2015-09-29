@@ -5,7 +5,7 @@
   "keywords"        : ["hmd", "oculus", "rift", "libovr", "dk1", "dk2", "native"],
   "author"          : "GeoJosh <joshua.penton@geocent.com>",
   "scripts"         : {
-    "install": "node-pre-gyp install",
+    "install": "./node_modules/.bin/node-pre-gyp install",
     "test" : "mocha -R spec test/test-*.js"
   },
   "lib"             : ".",
